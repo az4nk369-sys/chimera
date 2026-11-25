@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chimera — monster produktivitas local-first: Notes Markdown, Pomodoro, Habit Tracker, dan Flashcards dalam satu otak IndexedDB. Tanpa akun, tanpa server, tanpa tracking.">
+  <title>Chimera — Monster Produktivitas Local-First</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='8' width='20' height='18' rx='5' fill='%233ddc84'/%3E%3Ccircle cx='13' cy='16' r='2' fill='%230b0f14'/%3E%3Ccircle cx='19' cy='16' r='2' fill='%230b0f14'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="mascot" aria-hidden="true">
+      <!-- Maskot monster buatan sendiri (SVG inline, tanpa gambar berlisensi) -->
+      <svg viewBox="0 0 120 120" width="84" height="84" role="img" aria-label="Maskot monster Chimera">
+        <rect x="30" y="34" width="60" height="52" rx="14" fill="#3ddc84"/>
+        <rect x="30" y="34" width="60" height="14" rx="7" fill="#2f9e63"/>
+        <line x1="28" y1="60" x2="16" y2="60" stroke="#9aa5b1" stroke-width="4" stroke-linecap="round"/>
+        <line x1="92" y1="60" x2="104" y2="60" stroke="#9aa5b1" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="48" cy="56" r="7" fill="#fff"/>
+        <circle cx="72" cy="56" r="7" fill="#fff"/>
+        <circle cx="48" cy="56" r="3" fill="#0b0f14"/>
+        <circle cx="72" cy="56" r="3" fill="#0b0f14"/>
+        <path d="M42 68 Q50 74 60 68 Q70 74 78 68" stroke="#0b0f14" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <line x1="52" y1="66" x2="52" y2="74" stroke="#0b0f14" stroke-width="1.5"/>
+        <line x1="60" y1="66" x2="60" y2="74" stroke="#0b0f14" stroke-width="1.5"/>
+        <line x1="68" y1="66" x2="68" y2="74" stroke="#0b0f14" stroke-width="1.5"/>
+        <path d="M34 44 L86 44" stroke="#0b0f14" stroke-width="2" stroke-dasharray="5 4"/>
+        <circle cx="60" cy="88" r="4" fill="#3ddc84" stroke="#0b0f14" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div>
+      <h1>CHIMERA</h1>
+      <p class="tagline">Monster produktivitas local-first — empat anggota tubuh, satu otak, tanpa server.</p>
+    </div>
+  </header>
+
+  <div id="db-error" class="error-banner" hidden></div>
+
+  <nav class="tabs" aria-label="Modul Chimera">
+    <button class="tab active" data-tab="dashboard">🧟 Vitals</button>
+    <button class="tab" data-tab="notes">🧠 Notes</button>
+    <button class="tab" data-tab="pomodoro">❤️ Pomodoro</button>
+    <button class="tab" data-tab="habits">💪 Habits</button>
+    <button class="tab" data-tab="flashcards">🧬 Flashcards</button>
+  </nav>
+
+  <main>
+    <section id="view-dashboard" class="view active" aria-label="Dashboard vitals"></section>
+    <section id="view-notes" class="view" aria-label="Notes"></section>
+    <section id="view-pomodoro" class="view" aria-label="Pomodoro"></section>
+    <section id="view-habits" class="view" aria-label="Habits"></section>
+    <section id="view-flashcards" class="view" aria-label="Flashcards"></section>
+    <section id="backup" class="backup-view" aria-label="Backup"></section>
+  </main>
+
+  <footer>
+    <p>Chimera — Kiroween 2026 (Frankenstein). Semua data tersimpan lokal di perangkatmu (IndexedDB). Tanpa akun, tanpa server, tanpa tracking. Dibangun dengan Kiro (spec-driven) + vanilla JS.</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
